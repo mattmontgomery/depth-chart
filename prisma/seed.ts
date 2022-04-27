@@ -35,7 +35,17 @@ async function seed() {
   await prisma.depth.create({
     data: {
       team: "RSL 2022",
-      players: [],
+      goalkeepers: "Ochoa,Dewsnup,MacMath,Beavers,Gomez".split(","),
+      defenders:
+        "Brody,Farnsworth,Glad,Halsey,Herrera,Holt,Kappelhof,Orozco,Schmitt,Silva".split(
+          ","
+        ),
+      midfielders:
+        "Benitez,Besler,Caldwell,Chang,Davis,Kreilach,Luiz,Ruiz,Wellings".split(
+          ","
+        ),
+      forwards:
+        "Kei,Córdova,Fonseca,Garcia,Menendez,Meram,Rubin,Subah,Wood".split(","),
       userId: user.id,
     },
   });
